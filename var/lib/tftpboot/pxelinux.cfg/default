@@ -1,0 +1,8 @@
+DEFAULT sysresccd
+SERIAL 0 115200
+LABEL sysresccd
+  LINUX sysresccd/boot/x86_64/vmlinuz
+  INITRD sysresccd/boot/intel_ucode.img,sysresccd/boot/amd_ucode.img,sysresccd/boot/x86_64/sysresccd.img
+  APPEND archisobasedir=sysresccd archiso_http_srv=http://192.168.20.21/ checksum setkmap=us vga=normal console=tty0 console=ttyS0,115200n8
+  SYSAPPEND 1
+
